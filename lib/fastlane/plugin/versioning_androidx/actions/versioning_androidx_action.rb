@@ -25,7 +25,7 @@ module Fastlane
         end
 
         if IO.write(path, manifest) > 0
-          UI.success('Android Manifest update successfully')
+          UI.success('AndroidManifest.xml updated successfully')
         end
       end
 
