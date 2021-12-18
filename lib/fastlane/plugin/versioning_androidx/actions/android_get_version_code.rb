@@ -23,6 +23,10 @@ module Fastlane
                                       type: String)
         ]
       end
+
+      def self.is_supported?(platform)
+        [:android].include?(platform)
+      end
     end
   end
 end
