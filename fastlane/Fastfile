@@ -1,3 +1,12 @@
 lane :test do
-  versioning_androidx
+  # versioning_androidx
+  version_name = android_get_version_name(
+    manifest_path: './example/AndroidManifest.xml'
+  )
+  UI.message("[version:name] #{version_name}")
+
+  version_code = android_get_version_code(
+    manifest_path: './example/AndroidManifest.xml'
+  )
+  UI.message("[version:code] #{version_code}")
 end

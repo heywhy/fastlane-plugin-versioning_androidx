@@ -5,6 +5,9 @@ module Fastlane
 
   module Helper
     class VersioningAndroidxHelper
+      VERSION_CODE_RE = /android:versionCode=\"(\d+)\"/
+      VERSION_NAME_RE = /android:versionName=\"(\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b)\"/
+
       # class methods that you define here become available in your action
       # as `Helper::VersioningAndroidxHelper.your_method`
       #
